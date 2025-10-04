@@ -1,6 +1,6 @@
 -- You probably always want to set this in your vim file
 vim.opt.background = "dark"
-vim.g.colors_name = "lush_template"
+vim.g.colors_name = "reze"
 
 -- By setting our module to nil, we clear lua's cache,
 -- which means the require ahead will *always* occur.
