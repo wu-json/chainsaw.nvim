@@ -45,6 +45,14 @@
 local lush = require("lush")
 local hsl = lush.hsl
 
+-- Reze Colors
+local reze_colors = {
+	purple_light = hsl(324, 10, 40),
+	purple_dark = hsl(324, 10, 40),
+	green_light = hsl(324, 10, 40),
+	green_dark = hsl(324, 10, 40),
+}
+
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
 ---@diagnostic disable: undefined-global
