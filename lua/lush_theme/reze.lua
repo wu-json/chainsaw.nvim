@@ -52,6 +52,7 @@ local reze_colors = {
 	green_light = hsl(324, 10, 40),
 	green_dark = hsl(324, 10, 40),
 	white = hsl(40, 52, 91),
+	black = hsl(0, 0, 15),
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -136,7 +137,7 @@ local theme = lush(function(injected_functions)
 		-- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
 		-- WarningMsg     { }, -- Warning messages
 		-- Whitespace     { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
-		-- Winseparator   { }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
+		Winseparator({ fg = reze_colors.black }), -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
 		-- WildMenu       { }, -- Current match in 'wildmenu' completion
 		-- WinBar         { }, -- Window bar of current window
 		-- WinBarNC       { }, -- Window bar of not-current windows
