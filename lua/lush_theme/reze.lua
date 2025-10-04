@@ -51,6 +51,7 @@ local reze_colors = {
 	purple_dark = hsl(324, 10, 40),
 	green_light = hsl(324, 10, 40),
 	green_dark = hsl(324, 10, 40),
+	white = hsl(40, 52, 91),
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
