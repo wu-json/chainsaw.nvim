@@ -47,14 +47,14 @@ local hsl = lush.hsl
 
 -- Reze Colors
 local reze_colors = {
-	purple = hsl(257, 42, 65),
-	green = hsl(136, 51, 58),
-	white = hsl(340, 25, 91),
-	black = hsl(0, 0, 15),
+	purple = hsl(257, 55, 70), -- Increased saturation and lightness for better contrast
+	green = hsl(136, 65, 65), -- Increased saturation, adjusted lightness for better separation
+	white = hsl(340, 15, 95), -- Slightly brighter, less saturated for cleaner look
+	black = hsl(0, 0, 10), -- Darker for better contrast
 	-- High contrast purplish color for keywords (complementary to purple)
-	pink = hsl(300, 50, 75), -- Bright magenta-purple for excellent contrast
+	pink = hsl(300, 70, 80), -- Brighter and more saturated for better contrast
 	-- Magenta color - pink-purple family but distinct from existing colors
-	magenta = hsl(320, 45, 75), -- Soft magenta-pink for properties
+	magenta = hsl(320, 60, 75), -- Adjusted saturation and lightness for better distinction
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
