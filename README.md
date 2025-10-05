@@ -47,6 +47,11 @@ colorscheme reze
 
 The Bomb Devil.
 
+![reze](https://github.com/user-attachments/assets/d827de87-2488-4dac-b64b-ca47273a9945)
+
+![galactic-cube-cartoons-bomb-devil-4](https://github.com/user-attachments/assets/2b212393-525f-4f1f-a54a-36410d719246)
+
+
 # Development
 
 ```bash
