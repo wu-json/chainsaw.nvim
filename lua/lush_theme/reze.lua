@@ -118,15 +118,15 @@ local theme = lush(function(injected_functions)
 		-- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
 		-- PmenuSbar      { }, -- Popup menu: Scrollbar.
 		-- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
-		Question({ fg = reze_colors.purple_light }), -- |hit-enter| prompt and yes/no questions
-		QuickFixLine({ fg = reze_colors.purple_light }), -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+		-- Question({ fg = reze_colors.purple_light }), -- |hit-enter| prompt and yes/no questions
+		-- QuickFixLine({ fg = reze_colors.purple_light }), -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		-- Search         { }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
 		-- SpecialKey     { }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		-- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		-- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		-- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
 		-- SpellRare      { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
-		-- StatusLine     { }, -- Status line of current window
+		StatusLine({ bg = reze_colors.black }), -- Status line of current window
 		-- StatusLineNC   { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 		-- TabLine        { }, -- Tab pages line, not active tab page label
 		-- TabLineFill    { }, -- Tab pages line, where there are no labels
@@ -158,8 +158,8 @@ local theme = lush(function(injected_functions)
 		-- Boolean        { }, --   A boolean constant: TRUE, false
 		-- Float          { }, --   A floating point constant: 2.3e10
 
-		Identifier({ fg = reze_colors.purple_light }), -- (*) Any variable name
-		Function({ fg = reze_colors.purple_light }), --   Function name (also: methods for classes)
+		-- Identifier({ fg = reze_colors.purple_light }), -- (*) Any variable name
+		-- Function({ fg = reze_colors.purple_light }), --   Function name (also: methods for classes)
 
 		-- Statement      { }, -- (*) Any statement
 		-- Conditional    { }, --   if, then, else, endif, switch, etc.
@@ -180,12 +180,12 @@ local theme = lush(function(injected_functions)
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
 
-		Special({ fg = reze_colors.purple_light }), -- (*) Any special symbol
-		SpecialChar({ fg = reze_colors.purple_light }), --   Special character in a constant
-		Tag({ fg = reze_colors.purple_light }), --   You can use CTRL-] on this
+		-- Special({ fg = reze_colors.purple_light }), -- (*) Any special symbol
+		-- SpecialChar({ fg = reze_colors.purple_light }), --   Special character in a constant
+		-- Tag({ fg = reze_colors.purple_light }), --   You can use CTRL-] on this
 		-- Delimiter      { }, --   Character that needs attention
-		SpecialComment({ fg = reze_colors.purple_light }), --   Special things inside a comment (e.g. '\n')
-		Debug({ fg = reze_colors.purple_light }), --   Debugging statements
+		-- SpecialComment({ fg = reze_colors.purple_light }), --   Special things inside a comment (e.g. '\n')
+		-- Debug({ fg = reze_colors.purple_light }), --   Debugging statements
 
 		-- Underlined     { gui = "underline" }, -- Text that stands out, HTML links
 		-- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
@@ -208,14 +208,14 @@ local theme = lush(function(injected_functions)
 		-- See :h diagnostic-highlights, some groups may not be listed, submit a PR fix to lush-template!
 
 		-- Neo-tree highlights (LazyVim default file manager)
-		NeoTreeDirectoryIcon({ fg = reze_colors.purple_light }),
-		NeoTreeDirectoryName({ fg = reze_colors.purple_light }),
-		NeoTreeGitModified({ fg = reze_colors.purple_light }),
-		NeoTreeGitUntracked({ fg = reze_colors.purple_light }),
-		NeoTreeGitIgnored({ fg = reze_colors.purple_light }),
-		NeoTreeGitStaged({ fg = reze_colors.purple_light }),
-		NeoTreeGitUnstaged({ fg = reze_colors.purple_light }),
-		NeoTreeGitConflict({ fg = reze_colors.purple_light }),
+		-- NeoTreeDirectoryIcon({ fg = reze_colors.purple_light }),
+		-- NeoTreeDirectoryName({ fg = reze_colors.purple_light }),
+		-- NeoTreeGitModified({ fg = reze_colors.purple_light }),
+		-- NeoTreeGitUntracked({ fg = reze_colors.purple_light }),
+		-- NeoTreeGitIgnored({ fg = reze_colors.purple_light }),
+		-- NeoTreeGitStaged({ fg = reze_colors.purple_light }),
+		-- NeoTreeGitUnstaged({ fg = reze_colors.purple_light }),
+		-- NeoTreeGitConflict({ fg = reze_colors.purple_light }),
 		--
 		-- DiagnosticError            { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticWarn             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
@@ -281,9 +281,9 @@ local theme = lush(function(injected_functions)
 		-- sym"@number"            { }, -- Number
 		-- sym"@boolean"           { }, -- Boolean
 		-- sym"@float"             { }, -- Float
-		sym("@function")({ fg = reze_colors.purple_light }), -- Function
+		-- sym("@function")({ fg = reze_colors.purple_light }), -- Function
 		-- sym"@function.builtin"  { }, -- Special
-		sym("@function.macro")({ fg = reze_colors.purple_light }), -- Macro
+		-- sym("@function.macro")({ fg = reze_colors.purple_light }), -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym"@method"            { }, -- Function
 		-- sym"@field"             { }, -- Identifier
