@@ -40,6 +40,6 @@ colorscheme reze
 # Development
 
 ```bash
-# Build all colorschemes
+# Build all color schemes
 nvim -c "Shipwright" -c "quit"
 ```
