@@ -2,6 +2,8 @@
 
 # chainsaw.nvim
 
+A collection of Neovim lua themes based on characters in Chainsaw Man, built with [Lush](https://github.com/rktjmp/lush.nvim).
+
 # Installation
 
 ## lazy.nvim
@@ -38,6 +40,12 @@ Then add to your vim config:
 ```vim
 colorscheme reze
 ```
+
+# Themes
+
+## Reze レぜ
+
+The Bomb Devil.
 
 # Development
 
