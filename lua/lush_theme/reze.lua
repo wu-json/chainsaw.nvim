@@ -282,9 +282,9 @@ local theme = lush(function(injected_functions)
 		-- sym"@number"            { }, -- Number
 		-- sym"@boolean"           { }, -- Boolean
 		-- sym"@float"             { }, -- Float
-		-- sym("@function")({ fg = reze_colors.purple }), -- Function
+		sym("@function")({ fg = reze_colors.purple }), -- Function
 		-- sym"@function.builtin"  { }, -- Special
-		-- sym("@function.macro")({ fg = reze_colors.purple }), -- Macro
+		sym("@function.macro")({ fg = reze_colors.purple }), -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym"@method"            { }, -- Function
 		-- sym"@field"             { }, -- Identifier
