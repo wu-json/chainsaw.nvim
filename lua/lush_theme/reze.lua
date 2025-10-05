@@ -53,6 +53,8 @@ local reze_colors = {
 	black = hsl(0, 0, 15),
 	-- High contrast purplish color for keywords (complementary to purple)
 	pink = hsl(300, 50, 75), -- Bright magenta-purple for excellent contrast
+	-- Magenta color - pink-purple family but distinct from existing colors
+	magenta = hsl(320, 45, 75), -- Soft magenta-pink for properties
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -287,8 +289,8 @@ local theme = lush(function(injected_functions)
 		sym("@function.macro")({ fg = reze_colors.purple }), -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym"@method"            { }, -- Function
-		-- sym"@field"             { }, -- Identifier
-		-- sym"@property"          { }, -- Identifier
+		sym("@field")({ fg = reze_colors.magenta }), -- Field (object fields, etc.)
+		sym("@property")({ fg = reze_colors.magenta }), -- Property (object properties, etc.)
 		-- sym"@constructor"       { }, -- Special
 		-- sym"@conditional"       { }, -- Conditional
 		-- sym"@repeat"            { }, -- Repeat
