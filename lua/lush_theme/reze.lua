@@ -180,7 +180,7 @@ local theme = lush(function(injected_functions)
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
 
-		-- Special({ fg = reze_colors.purple_light }), -- (*) Any special symbol
+		Special({ fg = reze_colors.purple_light }), -- (*) Any special symbol
 		-- SpecialChar({ fg = reze_colors.purple_light }), --   Special character in a constant
 		-- Tag({ fg = reze_colors.purple_light }), --   You can use CTRL-] on this
 		-- Delimiter      { }, --   Character that needs attention
