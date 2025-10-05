@@ -48,6 +48,8 @@ colorscheme reze
 
 ## Reze レぜ
 
+`reze`
+
 The Bomb Devil.
 
 <table>
