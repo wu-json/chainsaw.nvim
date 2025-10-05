@@ -63,6 +63,10 @@ colorscheme reze
 
 # Development
 
+`chainsaw.nvim` is built with [Lush](https://github.com/rktjmp/lush.nvim) and uses [Shipwright](https://github.com/rktjmp/shipwright.nvim) as the build-system to output color schemes. In development, you can point to the lush theme to get live feedback on color adjustments. For `reze` that would be `reze_lush`.
+
+To build the final color schemes, we just run `:Shipwright`.
+
 ```bash
 # Build all color schemes
 nvim -c "Shipwright" -c "quit"
