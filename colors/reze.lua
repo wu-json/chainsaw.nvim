@@ -1,20 +1,54 @@
--- You probably always want to set this in your vim file
-vim.opt.background = "dark"
-vim.g.colors_name = "reze"
+local colors = {
+	-- PATCH_OPEN
+Normal = {fg = "#F8F7F7", bg = "NONE"},
+DiagnosticFloatingHint = {fg = "#A088DD"},
+DiagnosticFloatingInfo = {fg = "#A088DD"},
+DiagnosticFloatingOk = {fg = "#5CD67C"},
+DiagnosticHint = {fg = "#A088DD"},
+DiagnosticInfo = {fg = "#A088DD"},
+DiagnosticOk = {fg = "#5CD67C"},
+DiagnosticSignHint = {fg = "#A088DD"},
+DiagnosticSignInfo = {fg = "#A088DD"},
+DiagnosticSignOk = {fg = "#5CD67C"},
+DiagnosticVirtualTextHint = {fg = "#A088DD"},
+DiagnosticVirtualTextInfo = {fg = "#A088DD"},
+DiagnosticVirtualTextOk = {fg = "#5CD67C"},
+Directory = {fg = "#A088DD"},
+FloatBorder = {fg = "#666666"},
+Function = {fg = "#A088DD"},
+Keyword = {fg = "#A6A6A6", bold = true},
+ModeMsg = {fg = "#5CD67C"},
+MoreMsg = {fg = "#A088DD"},
+NeoTreeGitIgnored = {fg = "#A6A6A6"},
+NeoTreeGitModified = {fg = "#EBD6F5"},
+NeoTreeGitStaged = {fg = "#EBD6F5"},
+NormalFloat = {bg = "NONE"},
+Question = {fg = "#A088DD"},
+QuickFixLine = {fg = "#A088DD"},
+Special = {fg = "#A088DD"},
+StatusLine = {bg = "#1A1A1A"},
+StorageClass = {fg = "#A6A6A6", bold = true},
+String = {fg = "#5CD67C"},
+TabLine = {fg = "#F8F7F7", bg = "NONE"},
+TabLineFill = {bg = "NONE"},
+TabLineSel = {fg = "#A088DD", bg = "NONE", bold = true},
+Winseparator = {fg = "#1A1A1A"},
+["@field"] = {fg = "#A6A6A6"},
+["@function"] = {fg = "#A088DD"},
+["@function.macro"] = {fg = "#A088DD"},
+["@keyword"] = {fg = "#A6A6A6"},
+["@property"] = {fg = "#A6A6A6"},
+["@storageclass"] = {fg = "#A6A6A6", bold = true},
+["@string"] = {fg = "#5CD67C"},
+	-- PATCH_CLOSE
+}
 
--- By setting our module to nil, we clear lua's cache,
--- which means the require ahead will *always* occur.
---
--- This isn't strictly required but it can be a useful trick if you are
--- incrementally editing your config a lot and want to be sure your themes
--- changes are being picked up without restarting neovim.
---
--- Note if you're working in on your theme and have :Lushify'd the buffer,
--- your changes will be applied with our without the following line.
---
--- The performance impact of this call can be measured in the hundreds of
--- *nanoseconds* and such could be considered "production safe".
-package.loaded["lush_theme.lush_template"] = nil
+-- colorschemes generally want to do this
+vim.cmd("highlight clear")
+vim.cmd("set t_Co=256")
+vim.cmd("let g:colors_name='reze'")
 
--- include our theme file and pass it to lush to apply
-require("lush")(require("lush_theme.reze"))
+-- apply highlight groups
+for group, attrs in pairs(colors) do
+	vim.api.nvim_set_hl(0, group, attrs)
+end
