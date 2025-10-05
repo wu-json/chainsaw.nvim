@@ -52,9 +52,9 @@ local reze_colors = {
 	white = hsl(340, 15, 95), -- Slightly brighter, less saturated for cleaner look
 	black = hsl(0, 0, 10), -- Darker for better contrast
 	-- High contrast purplish color for keywords (complementary to purple)
-	pink = hsl(0, 0, 65), -- Prominent gray for syntax highlighting keywords, properties, functions
+	gray = hsl(0, 0, 65), -- Prominent gray for syntax highlighting keywords, properties, functions
 	-- Muted gray for floating windows and backgrounds
-	gray = hsl(0, 0, 40), -- Dark muted gray for better contrast
+	gray_muted = hsl(0, 0, 40), -- Dark muted gray for better contrast
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -110,7 +110,7 @@ local theme = lush(function(injected_functions)
 		-- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		Normal({ fg = reze_colors.white, bg = "NONE" }), -- Normal text
 		NormalFloat({ bg = "NONE" }), -- Normal text in floating windows.
-		FloatBorder({ fg = reze_colors.gray }), -- Border of floating windows.
+		FloatBorder({ fg = reze_colors.gray_muted }), -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
 		-- NormalNC       { }, -- normal text in non-current windows
 		-- Pmenu          { }, -- Popup menu: Normal item.
@@ -169,7 +169,7 @@ local theme = lush(function(injected_functions)
 		-- Repeat         { }, --   for, do, while, etc.
 		-- Label          { }, --   case, default, etc.
 		-- Operator       { }, --   "sizeof", "+", "*", etc.
-		Keyword({ fg = reze_colors.pink, gui = "bold" }), --   any other keyword (async, await, etc.)
+		Keyword({ fg = reze_colors.gray, gui = "bold" }), --   any other keyword (async, await, etc.)
 		-- Exception      { }, --   try, catch, throw
 
 		-- PreProc        { }, -- (*) Generic Preprocessor
@@ -179,7 +179,7 @@ local theme = lush(function(injected_functions)
 		-- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
 		-- Type           { }, -- (*) int, long, char, etc.
-		StorageClass({ fg = reze_colors.pink, gui = "bold" }), --   static, register, volatile, etc. (const, let, var)
+		StorageClass({ fg = reze_colors.gray, gui = "bold" }), --   static, register, volatile, etc. (const, let, var)
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
 
@@ -215,7 +215,7 @@ local theme = lush(function(injected_functions)
 		-- NeoTreeDirectoryName({ fg = reze_colors.purple }),
 		NeoTreeGitModified({ fg = reze_colors.green }),
 		-- NeoTreeGitUntracked({  }),
-		NeoTreeGitIgnored({ fg = reze_colors.pink }),
+		NeoTreeGitIgnored({ fg = reze_colors.gray }),
 		NeoTreeGitStaged({ fg = reze_colors.green }),
 		-- NeoTreeGitUnstaged({  }),
 		-- NeoTreeGitConflict({  }),
@@ -289,19 +289,19 @@ local theme = lush(function(injected_functions)
 		sym("@function.macro")({ fg = reze_colors.purple }), -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym"@method"            { }, -- Function
-		sym("@field")({ fg = reze_colors.pink }), -- Field (object fields, etc.)
-		sym("@property")({ fg = reze_colors.pink }), -- Property (object properties, etc.)
+		sym("@field")({ fg = reze_colors.gray }), -- Field (object fields, etc.)
+		sym("@property")({ fg = reze_colors.gray }), -- Property (object properties, etc.)
 		-- sym"@constructor"       { }, -- Special
 		-- sym"@conditional"       { }, -- Conditional
 		-- sym"@repeat"            { }, -- Repeat
 		-- sym"@label"             { }, -- Label
 		-- sym"@operator"          { }, -- Operator
-		sym("@keyword")({ fg = reze_colors.pink, gui = "bold" }), -- Keyword (async, await, etc.)
+		sym("@keyword")({ fg = reze_colors.gray }), -- Keyword (async, await, etc.)
 		-- sym"@exception"         { }, -- Exception
 		-- sym"@variable"          { }, -- Identifier
 		-- sym"@type"              { }, -- Type
 		-- sym"@type.definition"   { }, -- Typedef
-		sym("@storageclass")({ fg = reze_colors.pink, gui = "bold" }), -- StorageClass (const, let, var)
+		sym("@storageclass")({ fg = reze_colors.gray, gui = "bold" }), -- StorageClass (const, let, var)
 		-- sym"@structure"         { }, -- Structure
 		-- sym"@namespace"         { }, -- Identifier
 		-- sym"@include"           { }, -- Include
