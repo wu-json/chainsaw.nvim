@@ -55,6 +55,8 @@ local reze_colors = {
 	gray = hsl(0, 0, 65), -- Prominent gray for syntax highlighting keywords, properties, functions
 	-- Muted gray for floating windows and backgrounds
 	gray_muted = hsl(0, 0, 40), -- Dark muted gray for better contrast
+	-- Light purple for git status highlights
+	magenta = hsl(280, 60, 90), -- Light purple for GitModified and GitStaged
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -213,10 +215,10 @@ local theme = lush(function(injected_functions)
 		-- Neo-tree highlights (LazyVim default file manager)
 		-- NeoTreeDirectoryIcon({ fg = reze_colors.purple }),
 		-- NeoTreeDirectoryName({ fg = reze_colors.purple }),
-		NeoTreeGitModified({ fg = reze_colors.green }),
+		NeoTreeGitModified({ fg = reze_colors.magenta }),
 		-- NeoTreeGitUntracked({  }),
 		NeoTreeGitIgnored({ fg = reze_colors.gray }),
-		NeoTreeGitStaged({ fg = reze_colors.green }),
+		NeoTreeGitStaged({ fg = reze_colors.magenta }),
 		-- NeoTreeGitUnstaged({  }),
 		-- NeoTreeGitConflict({  }),
 		--
