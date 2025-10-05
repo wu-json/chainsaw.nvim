@@ -213,9 +213,9 @@ local theme = lush(function(injected_functions)
 		-- Neo-tree highlights (LazyVim default file manager)
 		-- NeoTreeDirectoryIcon({ fg = reze_colors.purple }),
 		-- NeoTreeDirectoryName({ fg = reze_colors.purple }),
-		NeoTreeGitModified({ fg = reze_colors.pink }),
+		NeoTreeGitModified({ fg = reze_colors.green }),
 		-- NeoTreeGitUntracked({  }),
-		-- NeoTreeGitIgnored({  }),
+		NeoTreeGitIgnored({ fg = reze_colors.pink }),
 		NeoTreeGitStaged({ fg = reze_colors.green }),
 		-- NeoTreeGitUnstaged({  }),
 		-- NeoTreeGitConflict({  }),
