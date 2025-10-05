@@ -55,8 +55,6 @@ local reze_colors = {
 	pink = hsl(300, 70, 80), -- Brighter and more saturated for better contrast
 	-- Magenta color - pink-purple family but distinct from existing colors
 	magenta = hsl(320, 60, 75), -- Adjusted saturation and lightness for better distinction
-	-- Muted gray for floating windows and backgrounds
-	muted_gray = hsl(0, 0, 20), -- Dark muted gray for better contrast
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -89,8 +87,8 @@ local theme = lush(function(injected_functions)
 		-- DiffDelete     { }, -- Diff mode: Deleted line |diff.txt|
 		-- DiffText       { }, -- Diff mode: Changed text within a changed line |diff.txt|
 		-- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
-		TermCursor({ fg = reze_colors.black, bg = reze_colors.white }), -- Cursor in a focused terminal
-		TermCursorNC({ fg = reze_colors.black, bg = reze_colors.muted_gray }), -- Cursor in an unfocused terminal
+		-- TermCursor     { }, -- Cursor in a focused terminal
+		-- TermCursorNC   { }, -- Cursor in an unfocused terminal
 		-- ErrorMsg       { }, -- Error messages on the command line
 		-- VertSplit      { }, -- Column separating vertically split windows
 		-- Folded         { }, -- Line used for closed folds
@@ -111,18 +109,18 @@ local theme = lush(function(injected_functions)
 		MoreMsg({ fg = reze_colors.purple }), -- |more-prompt|
 		-- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		Normal({ fg = reze_colors.white, bg = "NONE" }), -- Normal text
-		NormalFloat({ fg = reze_colors.white, bg = "NONE" }), -- Normal text in floating windows.
-		FloatBorder({ fg = reze_colors.white, bg = reze_colors.muted_gray }), -- Border of floating windows.
-		FloatTitle({ fg = reze_colors.white, bg = reze_colors.muted_gray }), -- Title of floating windows.
+		NormalFloat({ bg = "NONE" }), -- Normal text in floating windows.
+		-- FloatBorder    { }, -- Border of floating windows.
+		-- FloatTitle     { }, -- Title of floating windows.
 		-- NormalNC       { }, -- normal text in non-current windows
-		Pmenu({ fg = reze_colors.white, bg = reze_colors.muted_gray }), -- Popup menu: Normal item.
-		PmenuSel({ fg = reze_colors.black, bg = reze_colors.purple }), -- Popup menu: Selected item.
-		PmenuKind({ fg = reze_colors.purple, bg = reze_colors.muted_gray }), -- Popup menu: Normal item "kind"
-		PmenuKindSel({ fg = reze_colors.black, bg = reze_colors.purple }), -- Popup menu: Selected item "kind"
-		PmenuExtra({ fg = reze_colors.white, bg = reze_colors.muted_gray }), -- Popup menu: Normal item "extra text"
-		PmenuExtraSel({ fg = reze_colors.black, bg = reze_colors.purple }), -- Popup menu: Selected item "extra text"
-		PmenuSbar({ bg = reze_colors.black }), -- Popup menu: Scrollbar.
-		PmenuThumb({ bg = reze_colors.purple }), -- Popup menu: Thumb of the scrollbar.
+		-- Pmenu          { }, -- Popup menu: Normal item.
+		-- PmenuSel       { }, -- Popup menu: Selected item.
+		-- PmenuKind      { }, -- Popup menu: Normal item "kind"
+		-- PmenuKindSel   { }, -- Popup menu: Selected item "kind"
+		-- PmenuExtra     { }, -- Popup menu: Normal item "extra text"
+		-- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
+		-- PmenuSbar      { }, -- Popup menu: Scrollbar.
+		-- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
 		Question({ fg = reze_colors.purple }), -- |hit-enter| prompt and yes/no questions
 		QuickFixLine({ fg = reze_colors.purple }), -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		-- Search         { }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
