@@ -52,7 +52,7 @@ local reze_colors = {
 	white = hsl(340, 25, 91),
 	black = hsl(0, 0, 15),
 	-- High contrast purplish color for keywords (complementary to purple)
-	pink = hsl(300, 60, 75), -- Bright magenta-purple for excellent contrast
+	pink = hsl(300, 50, 75), -- Bright magenta-purple for excellent contrast
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
