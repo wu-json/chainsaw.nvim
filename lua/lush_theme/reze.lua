@@ -100,7 +100,7 @@ local theme = lush(function(injected_functions)
 		-- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
 		-- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
 		-- MatchParen     { }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-		-- ModeMsg        { }, -- 'showmode' message (e.g., "-- INSERT -- ")
+		ModeMsg({ fg = reze_colors.green_light }), -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea        { }, -- Area for messages and cmdline
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		MoreMsg({ fg = reze_colors.purple_light }), -- |more-prompt|
@@ -152,7 +152,7 @@ local theme = lush(function(injected_functions)
 		-- Comment        { }, -- Any comment
 
 		-- Constant       { }, -- (*) Any constant
-		-- String         { }, --   A string constant: "this is a string"
+		String({ fg = reze_colors.green_light }), --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
 		-- Number         { }, --   A number constant: 234, 0xff
 		-- Boolean        { }, --   A boolean constant: TRUE, false
@@ -213,7 +213,7 @@ local theme = lush(function(injected_functions)
 		-- NeoTreeGitModified({ fg = reze_colors.purple_light }),
 		-- NeoTreeGitUntracked({ fg = reze_colors.purple_light }),
 		-- NeoTreeGitIgnored({ fg = reze_colors.purple_light }),
-		-- NeoTreeGitStaged({ fg = reze_colors.purple_light }),
+		NeoTreeGitStaged({ fg = reze_colors.green_light }),
 		-- NeoTreeGitUnstaged({ fg = reze_colors.purple_light }),
 		-- NeoTreeGitConflict({ fg = reze_colors.purple_light }),
 		--
@@ -221,12 +221,12 @@ local theme = lush(function(injected_functions)
 		-- DiagnosticWarn             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		DiagnosticInfo({ fg = reze_colors.purple_light }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		DiagnosticHint({ fg = reze_colors.purple_light }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-		-- DiagnosticOk               { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+		DiagnosticOk({ fg = reze_colors.green_light }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
 		-- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
 		DiagnosticVirtualTextInfo({ fg = reze_colors.purple_light }), -- Used for "Info" diagnostic virtual text.
 		DiagnosticVirtualTextHint({ fg = reze_colors.purple_light }), -- Used for "Hint" diagnostic virtual text.
-		-- DiagnosticVirtualTextOk    { } , -- Used for "Ok" diagnostic virtual text.
+		DiagnosticVirtualTextOk({ fg = reze_colors.green_light }), -- Used for "Ok" diagnostic virtual text.
 		-- DiagnosticUnderlineError   { } , -- Used to underline "Error" diagnostics.
 		-- DiagnosticUnderlineWarn    { } , -- Used to underline "Warn" diagnostics.
 		-- DiagnosticUnderlineInfo    { } , -- Used to underline "Info" diagnostics.
@@ -236,12 +236,12 @@ local theme = lush(function(injected_functions)
 		-- DiagnosticFloatingWarn     { } , -- Used to color "Warn" diagnostic messages in diagnostics float.
 		DiagnosticFloatingInfo({ fg = reze_colors.purple_light }), -- Used to color "Info" diagnostic messages in diagnostics float.
 		DiagnosticFloatingHint({ fg = reze_colors.purple_light }), -- Used to color "Hint" diagnostic messages in diagnostics float.
-		-- DiagnosticFloatingOk       { } , -- Used to color "Ok" diagnostic messages in diagnostics float.
+		DiagnosticFloatingOk({ fg = reze_colors.green_light }), -- Used to color "Ok" diagnostic messages in diagnostics float.
 		-- DiagnosticSignError        { } , -- Used for "Error" signs in sign column.
 		-- DiagnosticSignWarn         { } , -- Used for "Warn" signs in sign column.
 		DiagnosticSignInfo({ fg = reze_colors.purple_light }), -- Used for "Info" signs in sign column.
 		DiagnosticSignHint({ fg = reze_colors.purple_light }), -- Used for "Hint" signs in sign column.
-		-- DiagnosticSignOk           { } , -- Used for "Ok" signs in sign column.
+		DiagnosticSignOk({ fg = reze_colors.green_light }), -- Used for "Ok" signs in sign column.
 
 		-- Tree-Sitter syntax groups.
 		--
@@ -273,7 +273,7 @@ local theme = lush(function(injected_functions)
 		-- sym"@constant.macro"    { }, -- Define
 		-- sym"@define"            { }, -- Define
 		-- sym"@macro"             { }, -- Macro
-		-- sym"@string"            { }, -- String
+		sym("@string")({ fg = reze_colors.green_light }), -- String
 		-- sym"@string.escape"     { }, -- SpecialChar
 		-- sym"@string.special"    { }, -- SpecialChar
 		-- sym"@character"         { }, -- Character
