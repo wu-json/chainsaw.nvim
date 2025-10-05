@@ -48,9 +48,7 @@ colorscheme reze
 
 ## Reze レぜ
 
-`reze`
-
-The Bomb Devil.
+`reze` - The Bomb Devil.
 
 <table>
   <tr>
