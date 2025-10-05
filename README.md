@@ -54,6 +54,7 @@ The Bomb Devil.
   </tr>
 </table>
 
+<img width="1145" height="391" alt="スクリーンショット 2025-10-05 午前11 48 17" src="https://github.com/user-attachments/assets/93322e50-8991-466b-bc96-9f97ab998d7d" />
 
 # Development
 
