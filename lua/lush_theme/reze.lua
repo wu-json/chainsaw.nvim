@@ -53,8 +53,6 @@ local reze_colors = {
 	black = hsl(0, 0, 10), -- Darker for better contrast
 	-- High contrast purplish color for keywords (complementary to purple)
 	pink = hsl(300, 70, 80), -- Brighter and more saturated for better contrast
-	-- Magenta color - pink-purple family but distinct from existing colors
-	magenta = hsl(320, 60, 75), -- Adjusted saturation and lightness for better distinction
 	-- Muted gray for floating windows and backgrounds
 	gray = hsl(0, 0, 40), -- Dark muted gray for better contrast
 }
@@ -215,7 +213,7 @@ local theme = lush(function(injected_functions)
 		-- Neo-tree highlights (LazyVim default file manager)
 		-- NeoTreeDirectoryIcon({ fg = reze_colors.purple }),
 		-- NeoTreeDirectoryName({ fg = reze_colors.purple }),
-		NeoTreeGitModified({ fg = reze_colors.magenta }),
+		NeoTreeGitModified({ fg = reze_colors.pink }),
 		-- NeoTreeGitUntracked({  }),
 		-- NeoTreeGitIgnored({  }),
 		NeoTreeGitStaged({ fg = reze_colors.green }),
@@ -291,8 +289,8 @@ local theme = lush(function(injected_functions)
 		sym("@function.macro")({ fg = reze_colors.purple }), -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym"@method"            { }, -- Function
-		sym("@field")({ fg = reze_colors.magenta }), -- Field (object fields, etc.)
-		sym("@property")({ fg = reze_colors.magenta }), -- Property (object properties, etc.)
+		sym("@field")({ fg = reze_colors.pink }), -- Field (object fields, etc.)
+		sym("@property")({ fg = reze_colors.pink }), -- Property (object properties, etc.)
 		-- sym"@constructor"       { }, -- Special
 		-- sym"@conditional"       { }, -- Conditional
 		-- sym"@repeat"            { }, -- Repeat
