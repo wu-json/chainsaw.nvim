@@ -121,8 +121,8 @@ local theme = lush(function(injected_functions)
 		-- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
 		-- PmenuSbar      { }, -- Popup menu: Scrollbar.
 		-- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
-		-- Question({ fg = reze_colors.purple }), -- |hit-enter| prompt and yes/no questions
-		-- QuickFixLine({ fg = reze_colors.purple }), -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+		Question({ fg = reze_colors.purple }), -- |hit-enter| prompt and yes/no questions
+		QuickFixLine({ fg = reze_colors.purple }), -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		-- Search         { }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
 		-- SpecialKey     { }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		-- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -213,7 +213,7 @@ local theme = lush(function(injected_functions)
 		-- Neo-tree highlights (LazyVim default file manager)
 		-- NeoTreeDirectoryIcon({ fg = reze_colors.purple }),
 		-- NeoTreeDirectoryName({ fg = reze_colors.purple }),
-		-- NeoTreeGitModified({  }),
+		NeoTreeGitModified({ fg = reze_colors.magenta }),
 		-- NeoTreeGitUntracked({  }),
 		-- NeoTreeGitIgnored({  }),
 		NeoTreeGitStaged({ fg = reze_colors.green }),
