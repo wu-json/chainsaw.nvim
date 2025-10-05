@@ -7,7 +7,24 @@ A collection of Neovim lua themes based on characters in Chainsaw Man, built wit
 > [!NOTE]
 > For the best visual experience, I would recommend setting your terminal theme to `carbonfox`. These themes intentionally do not define any background colors and inherit the transparency and color of your terminal theme. `carbonfox` compliments the palette of these themes quite well. In the future I may make iTerm equivalents of these palettes but for now this is what you get.
 
+# Themes
+
+## Reze レぜ
+
+`reze` - The Bomb Devil.
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/d827de87-2488-4dac-b64b-ca47273a9945" height="400" /></td>
+    <td><img src="https://github.com/user-attachments/assets/2b212393-525f-4f1f-a54a-36410d719246" height="400" /></td>
+  </tr>
+</table>
+
+<img width="1145" height="391" alt="スクリーンショット 2025-10-05 午前11 48 17" src="https://github.com/user-attachments/assets/93322e50-8991-466b-bc96-9f97ab998d7d" />
+
 # Installation
+
+These instructions use `reze` as the selected example theme but if you want to use a different one in this set just replace it with the one you want. Reze is objectively the best though.
 
 ## lazy.nvim
 ```lua
@@ -43,21 +60,6 @@ Then add to your vim config:
 ```vim
 colorscheme reze
 ```
-
-# Themes
-
-## Reze レぜ
-
-`reze` - The Bomb Devil.
-
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/d827de87-2488-4dac-b64b-ca47273a9945" height="400" /></td>
-    <td><img src="https://github.com/user-attachments/assets/2b212393-525f-4f1f-a54a-36410d719246" height="400" /></td>
-  </tr>
-</table>
-
-<img width="1145" height="391" alt="スクリーンショット 2025-10-05 午前11 48 17" src="https://github.com/user-attachments/assets/93322e50-8991-466b-bc96-9f97ab998d7d" />
 
 # Development
 
