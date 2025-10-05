@@ -56,7 +56,7 @@ local reze_colors = {
 	-- Muted gray for floating windows and backgrounds
 	gray_muted = hsl(0, 0, 40), -- Dark muted gray for better contrast
 	-- Light purple for git status highlights
-	magenta = hsl(280, 60, 90), -- Light purple for GitModified and GitStaged
+	magenta = hsl(280, 70, 90), -- Light purple for GitModified and GitStaged
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -163,7 +163,7 @@ local theme = lush(function(injected_functions)
 		-- Boolean        { }, --   A boolean constant: TRUE, false
 		-- Float          { }, --   A floating point constant: 2.3e10
 
-		-- Identifier({ fg = reze_colors.purple }), -- (*) Any variable name
+		Identifier({ fg = reze_colors.purple }), -- (*) Any variable name
 		Function({ fg = reze_colors.purple }), --   Function name (also: methods for classes)
 
 		-- Statement      { }, -- (*) Any statement
