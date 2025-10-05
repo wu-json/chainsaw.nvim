@@ -48,11 +48,11 @@ local hsl = lush.hsl
 -- Reze Colors
 local reze_colors = {
 	purple = hsl(257, 55, 70), -- Increased saturation and lightness for better contrast
-	green = hsl(136, 65, 60), -- Increased saturation, adjusted lightness for better separation
+	green = hsl(136, 60, 60), -- Increased saturation, adjusted lightness for better separation
 	white = hsl(340, 15, 95), -- Slightly brighter, less saturated for cleaner look
 	black = hsl(0, 0, 10), -- Darker for better contrast
 	-- High contrast purplish color for keywords (complementary to purple)
-	pink = hsl(300, 70, 80), -- Brighter and more saturated for better contrast
+	pink = hsl(0, 0, 65), -- Prominent gray for syntax highlighting keywords, properties, functions
 	-- Muted gray for floating windows and backgrounds
 	gray = hsl(0, 0, 40), -- Dark muted gray for better contrast
 }
