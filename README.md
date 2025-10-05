@@ -5,7 +5,7 @@
 A collection of Neovim lua themes based on characters in Chainsaw Man, built with [Lush](https://github.com/rktjmp/lush.nvim).
 
 > [!NOTE]
-> For the best visual experience, I would recommend setting your terminal theme to `carbonfox`. These themes intentionally do not define any background colors and inherit the transparency and color of your terminal theme. `carbonfox` compliments the palette of these themes quite well. In the future I may make iTerm equivalents of these palettes but for now this is what you get.
+> For the best visual experience, I would recommend setting your terminal theme to `carbonfox`. These themes intentionally do not define any background colors and inherit the transparency and color of your terminal theme. `carbonfox` compliments the palette of these themes quite well. In the future I may make iTerm2 equivalents of these themes but for now this is what you get.
 
 # Themes
 
