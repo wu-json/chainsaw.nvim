@@ -1,61 +1,14 @@
---
--- Built with,
---
---        ,gggg,
---       d8" "8I                         ,dPYb,
---       88  ,dP                         IP'`Yb
---    8888888P"                          I8  8I
---       88                              I8  8'
---       88        gg      gg    ,g,     I8 dPgg,
---  ,aa,_88        I8      8I   ,8'8,    I8dP" "8I
--- dP" "88P        I8,    ,8I  ,8'  Yb   I8P    I8
--- Yb,_,d88b,,_   ,d8b,  ,d8b,,8'_   8) ,d8     I8,
---  "Y8P"  "Y888888P'"Y88P"`Y8P' "YY8P8P88P     `Y8
---
-
--- This is a starter colorscheme for use with Lush,
--- for usage guides, see :h lush or :LushRunTutorial
-
---
--- Note: Because this is a lua file, vim will append it to the runtime,
---       which means you can require(...) it in other lua code (this is useful),
---       but you should also take care not to conflict with other libraries.
---
---       (This is a lua quirk, as it has somewhat poor support for namespacing.)
---
---       Basically, name your file,
---
---       "super_theme/lua/lush_theme/super_theme_dark.lua",
---
---       not,
---
---       "super_theme/lua/dark.lua".
---
---       With that caveat out of the way...
---
-
--- Enable lush.ify on this file, run:
---
---  `:Lushify`
---
---  or
---
---  `:lua require('lush').ify()`
-
 local lush = require("lush")
 local hsl = lush.hsl
 
 local palette = {
-	purple = hsl(257, 55, 70), -- Increased saturation and lightness for better contrast
-	green = hsl(136, 50, 60), -- Increased saturation, adjusted lightness for better separation
-	white = hsl(340, 8, 97), -- More white but still slightly off-white with subtle warmth
-	black = hsl(0, 0, 10), -- Darker for better contrast
-	-- High contrast purplish color for keywords (complementary to purple)
-	gray = hsl(0, 0, 65), -- Prominent gray for syntax highlighting keywords, properties, functions
-	-- Muted gray for floating windows and backgrounds
-	gray_muted = hsl(0, 0, 40), -- Dark muted gray for better contrast
-	-- Light purple for git status highlights
-	magenta = hsl(280, 70, 90), -- Light purple for GitModified and GitStaged
+	purple = hsl(257, 55, 70),
+	green = hsl(136, 50, 60),
+	white = hsl(340, 8, 97),
+	black = hsl(0, 0, 10),
+	gray = hsl(0, 0, 65),
+	gray_muted = hsl(0, 0, 40),
+	magenta = hsl(280, 70, 90),
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -312,7 +265,6 @@ local theme = lush(function(injected_functions)
 	}
 end)
 
--- Return our parsed theme for extension or use elsewhere.
 return theme
 
 -- vi:nowrap
