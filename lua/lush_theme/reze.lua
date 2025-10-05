@@ -210,12 +210,12 @@ local theme = lush(function(injected_functions)
 		-- Neo-tree highlights (LazyVim default file manager)
 		-- NeoTreeDirectoryIcon({ fg = reze_colors.purple_light }),
 		-- NeoTreeDirectoryName({ fg = reze_colors.purple_light }),
-		-- NeoTreeGitModified({ fg = reze_colors.purple_light }),
-		-- NeoTreeGitUntracked({ fg = reze_colors.purple_light }),
-		-- NeoTreeGitIgnored({ fg = reze_colors.purple_light }),
+		-- NeoTreeGitModified({  }),
+		-- NeoTreeGitUntracked({  }),
+		-- NeoTreeGitIgnored({  }),
 		NeoTreeGitStaged({ fg = reze_colors.green_light }),
-		-- NeoTreeGitUnstaged({ fg = reze_colors.purple_light }),
-		-- NeoTreeGitConflict({ fg = reze_colors.purple_light }),
+		-- NeoTreeGitUnstaged({  }),
+		-- NeoTreeGitConflict({  }),
 		--
 		-- DiagnosticError            { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticWarn             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
