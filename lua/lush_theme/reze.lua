@@ -55,6 +55,8 @@ local reze_colors = {
 	pink = hsl(300, 70, 80), -- Brighter and more saturated for better contrast
 	-- Magenta color - pink-purple family but distinct from existing colors
 	magenta = hsl(320, 60, 75), -- Adjusted saturation and lightness for better distinction
+	-- Muted gray for floating windows and backgrounds
+	gray = hsl(0, 0, 40), -- Dark muted gray for better contrast
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -110,7 +112,7 @@ local theme = lush(function(injected_functions)
 		-- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		Normal({ fg = reze_colors.white, bg = "NONE" }), -- Normal text
 		NormalFloat({ bg = "NONE" }), -- Normal text in floating windows.
-		-- FloatBorder    { }, -- Border of floating windows.
+		FloatBorder({ fg = reze_colors.gray }), -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
 		-- NormalNC       { }, -- normal text in non-current windows
 		-- Pmenu          { }, -- Popup menu: Normal item.
