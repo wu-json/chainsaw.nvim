@@ -17,4 +17,4 @@ vim.g.colors_name = "reze_lush"
 package.loaded["lush_theme.lush_template"] = nil
 
 -- include our theme file and pass it to lush to apply
-require("lush")(require("lush_theme.reze"))
+require("lush")(require("themes.reze"))
