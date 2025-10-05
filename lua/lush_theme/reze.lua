@@ -47,7 +47,7 @@ local hsl = lush.hsl
 
 -- Reze Colors
 local reze_colors = {
-	purple_light = hsl(321, 8, 70),
+	purple_light = hsl(257, 42, 60),
 	purple_dark = hsl(328, 13, 20),
 	green_light = hsl(93, 13, 53),
 	green_dark = hsl(113, 12, 28),
