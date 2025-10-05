@@ -1,3 +1,5 @@
+![hqdefault](https://github.com/user-attachments/assets/3608c8cb-cbca-43cd-99fd-f6fae5cabe11)
+
 # chainsaw.nvim
 
 # Installation
