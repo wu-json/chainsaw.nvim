@@ -1,4 +1,4 @@
-![hqdefault](https://github.com/user-attachments/assets/3608c8cb-cbca-43cd-99fd-f6fae5cabe11)
+<img width="1333" height="641" alt="chainsaw-man-13" src="https://github.com/user-attachments/assets/f9567a90-12df-4f1f-bc90-badb9a22956f" />
 
 # chainsaw.nvim
 
