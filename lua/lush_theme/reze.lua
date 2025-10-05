@@ -47,10 +47,12 @@ local hsl = lush.hsl
 
 -- Reze Colors
 local reze_colors = {
-	purple_light = hsl(257, 42, 65),
-	green_light = hsl(136, 51, 58),
+	purple = hsl(257, 42, 65),
+	green = hsl(136, 51, 58),
 	white = hsl(340, 25, 91),
 	black = hsl(0, 0, 15),
+	-- High contrast purplish color for keywords (complementary to purple)
+	pink = hsl(300, 60, 75), -- Bright magenta-purple for excellent contrast
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -77,7 +79,7 @@ local theme = lush(function(injected_functions)
 		-- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
 		-- CursorColumn   { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		-- CursorLine     { }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
-		Directory({ fg = reze_colors.purple_light }), -- Directory names (and other special names in listings)
+		Directory({ fg = reze_colors.purple }), -- Directory names (and other special names in listings)
 		-- DiffAdd        { }, -- Diff mode: Added line |diff.txt|
 		-- DiffChange     { }, -- Diff mode: Changed line |diff.txt|
 		-- DiffDelete     { }, -- Diff mode: Deleted line |diff.txt|
@@ -99,10 +101,10 @@ local theme = lush(function(injected_functions)
 		-- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
 		-- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
 		-- MatchParen     { }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-		ModeMsg({ fg = reze_colors.green_light }), -- 'showmode' message (e.g., "-- INSERT -- ")
+		ModeMsg({ fg = reze_colors.green }), -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea        { }, -- Area for messages and cmdline
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-		MoreMsg({ fg = reze_colors.purple_light }), -- |more-prompt|
+		MoreMsg({ fg = reze_colors.purple }), -- |more-prompt|
 		-- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		Normal({ fg = reze_colors.white, bg = "NONE" }), -- Normal text
 		NormalFloat({ bg = "NONE" }), -- Normal text in floating windows.
@@ -117,8 +119,8 @@ local theme = lush(function(injected_functions)
 		-- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
 		-- PmenuSbar      { }, -- Popup menu: Scrollbar.
 		-- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
-		-- Question({ fg = reze_colors.purple_light }), -- |hit-enter| prompt and yes/no questions
-		-- QuickFixLine({ fg = reze_colors.purple_light }), -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+		-- Question({ fg = reze_colors.purple }), -- |hit-enter| prompt and yes/no questions
+		-- QuickFixLine({ fg = reze_colors.purple }), -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		-- Search         { }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
 		-- SpecialKey     { }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		-- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -151,21 +153,21 @@ local theme = lush(function(injected_functions)
 		-- Comment        { }, -- Any comment
 
 		-- Constant       { }, -- (*) Any constant
-		String({ fg = reze_colors.green_light }), --   A string constant: "this is a string"
+		String({ fg = reze_colors.green }), --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
 		-- Number         { }, --   A number constant: 234, 0xff
 		-- Boolean        { }, --   A boolean constant: TRUE, false
 		-- Float          { }, --   A floating point constant: 2.3e10
 
-		-- Identifier({ fg = reze_colors.purple_light }), -- (*) Any variable name
-		Function({ fg = reze_colors.purple_light }), --   Function name (also: methods for classes)
+		-- Identifier({ fg = reze_colors.purple }), -- (*) Any variable name
+		Function({ fg = reze_colors.purple }), --   Function name (also: methods for classes)
 
 		-- Statement      { }, -- (*) Any statement
 		-- Conditional    { }, --   if, then, else, endif, switch, etc.
 		-- Repeat         { }, --   for, do, while, etc.
 		-- Label          { }, --   case, default, etc.
 		-- Operator       { }, --   "sizeof", "+", "*", etc.
-		-- Keyword        { }, --   any other keyword
+		Keyword({ fg = reze_colors.pink, gui = "bold" }), --   any other keyword (async, await, etc.)
 		-- Exception      { }, --   try, catch, throw
 
 		-- PreProc        { }, -- (*) Generic Preprocessor
@@ -175,16 +177,16 @@ local theme = lush(function(injected_functions)
 		-- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
 		-- Type           { }, -- (*) int, long, char, etc.
-		-- StorageClass   { }, --   static, register, volatile, etc.
+		StorageClass({ fg = reze_colors.pink, gui = "bold" }), --   static, register, volatile, etc. (const, let, var)
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
 
-		Special({ fg = reze_colors.purple_light }), -- (*) Any special symbol
-		-- SpecialChar({ fg = reze_colors.purple_light }), --   Special character in a constant
-		-- Tag({ fg = reze_colors.purple_light }), --   You can use CTRL-] on this
+		Special({ fg = reze_colors.purple }), -- (*) Any special symbol
+		-- SpecialChar({ fg = reze_colors.purple }), --   Special character in a constant
+		-- Tag({ fg = reze_colors.purple }), --   You can use CTRL-] on this
 		-- Delimiter      { }, --   Character that needs attention
-		-- SpecialComment({ fg = reze_colors.purple_light }), --   Special things inside a comment (e.g. '\n')
-		-- Debug({ fg = reze_colors.purple_light }), --   Debugging statements
+		-- SpecialComment({ fg = reze_colors.purple }), --   Special things inside a comment (e.g. '\n')
+		-- Debug({ fg = reze_colors.purple }), --   Debugging statements
 
 		-- Underlined     { gui = "underline" }, -- Text that stands out, HTML links
 		-- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
@@ -207,25 +209,25 @@ local theme = lush(function(injected_functions)
 		-- See :h diagnostic-highlights, some groups may not be listed, submit a PR fix to lush-template!
 
 		-- Neo-tree highlights (LazyVim default file manager)
-		-- NeoTreeDirectoryIcon({ fg = reze_colors.purple_light }),
-		-- NeoTreeDirectoryName({ fg = reze_colors.purple_light }),
+		-- NeoTreeDirectoryIcon({ fg = reze_colors.purple }),
+		-- NeoTreeDirectoryName({ fg = reze_colors.purple }),
 		-- NeoTreeGitModified({  }),
 		-- NeoTreeGitUntracked({  }),
 		-- NeoTreeGitIgnored({  }),
-		NeoTreeGitStaged({ fg = reze_colors.green_light }),
+		NeoTreeGitStaged({ fg = reze_colors.green }),
 		-- NeoTreeGitUnstaged({  }),
 		-- NeoTreeGitConflict({  }),
 		--
 		-- DiagnosticError            { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticWarn             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-		DiagnosticInfo({ fg = reze_colors.purple_light }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-		DiagnosticHint({ fg = reze_colors.purple_light }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-		DiagnosticOk({ fg = reze_colors.green_light }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+		DiagnosticInfo({ fg = reze_colors.purple }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+		DiagnosticHint({ fg = reze_colors.purple }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+		DiagnosticOk({ fg = reze_colors.green }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
 		-- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
-		DiagnosticVirtualTextInfo({ fg = reze_colors.purple_light }), -- Used for "Info" diagnostic virtual text.
-		DiagnosticVirtualTextHint({ fg = reze_colors.purple_light }), -- Used for "Hint" diagnostic virtual text.
-		DiagnosticVirtualTextOk({ fg = reze_colors.green_light }), -- Used for "Ok" diagnostic virtual text.
+		DiagnosticVirtualTextInfo({ fg = reze_colors.purple }), -- Used for "Info" diagnostic virtual text.
+		DiagnosticVirtualTextHint({ fg = reze_colors.purple }), -- Used for "Hint" diagnostic virtual text.
+		DiagnosticVirtualTextOk({ fg = reze_colors.green }), -- Used for "Ok" diagnostic virtual text.
 		-- DiagnosticUnderlineError   { } , -- Used to underline "Error" diagnostics.
 		-- DiagnosticUnderlineWarn    { } , -- Used to underline "Warn" diagnostics.
 		-- DiagnosticUnderlineInfo    { } , -- Used to underline "Info" diagnostics.
@@ -233,14 +235,14 @@ local theme = lush(function(injected_functions)
 		-- DiagnosticUnderlineOk      { } , -- Used to underline "Ok" diagnostics.
 		-- DiagnosticFloatingError    { } , -- Used to color "Error" diagnostic messages in diagnostics float. See |vim.diagnostic.open_float()|
 		-- DiagnosticFloatingWarn     { } , -- Used to color "Warn" diagnostic messages in diagnostics float.
-		DiagnosticFloatingInfo({ fg = reze_colors.purple_light }), -- Used to color "Info" diagnostic messages in diagnostics float.
-		DiagnosticFloatingHint({ fg = reze_colors.purple_light }), -- Used to color "Hint" diagnostic messages in diagnostics float.
-		DiagnosticFloatingOk({ fg = reze_colors.green_light }), -- Used to color "Ok" diagnostic messages in diagnostics float.
+		DiagnosticFloatingInfo({ fg = reze_colors.purple }), -- Used to color "Info" diagnostic messages in diagnostics float.
+		DiagnosticFloatingHint({ fg = reze_colors.purple }), -- Used to color "Hint" diagnostic messages in diagnostics float.
+		DiagnosticFloatingOk({ fg = reze_colors.green }), -- Used to color "Ok" diagnostic messages in diagnostics float.
 		-- DiagnosticSignError        { } , -- Used for "Error" signs in sign column.
 		-- DiagnosticSignWarn         { } , -- Used for "Warn" signs in sign column.
-		DiagnosticSignInfo({ fg = reze_colors.purple_light }), -- Used for "Info" signs in sign column.
-		DiagnosticSignHint({ fg = reze_colors.purple_light }), -- Used for "Hint" signs in sign column.
-		DiagnosticSignOk({ fg = reze_colors.green_light }), -- Used for "Ok" signs in sign column.
+		DiagnosticSignInfo({ fg = reze_colors.purple }), -- Used for "Info" signs in sign column.
+		DiagnosticSignHint({ fg = reze_colors.purple }), -- Used for "Hint" signs in sign column.
+		DiagnosticSignOk({ fg = reze_colors.green }), -- Used for "Ok" signs in sign column.
 
 		-- Tree-Sitter syntax groups.
 		--
@@ -272,7 +274,7 @@ local theme = lush(function(injected_functions)
 		-- sym"@constant.macro"    { }, -- Define
 		-- sym"@define"            { }, -- Define
 		-- sym"@macro"             { }, -- Macro
-		sym("@string")({ fg = reze_colors.green_light }), -- String
+		sym("@string")({ fg = reze_colors.green }), -- String
 		-- sym"@string.escape"     { }, -- SpecialChar
 		-- sym"@string.special"    { }, -- SpecialChar
 		-- sym"@character"         { }, -- Character
@@ -280,9 +282,9 @@ local theme = lush(function(injected_functions)
 		-- sym"@number"            { }, -- Number
 		-- sym"@boolean"           { }, -- Boolean
 		-- sym"@float"             { }, -- Float
-		-- sym("@function")({ fg = reze_colors.purple_light }), -- Function
+		-- sym("@function")({ fg = reze_colors.purple }), -- Function
 		-- sym"@function.builtin"  { }, -- Special
-		-- sym("@function.macro")({ fg = reze_colors.purple_light }), -- Macro
+		-- sym("@function.macro")({ fg = reze_colors.purple }), -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym"@method"            { }, -- Function
 		-- sym"@field"             { }, -- Identifier
@@ -292,12 +294,12 @@ local theme = lush(function(injected_functions)
 		-- sym"@repeat"            { }, -- Repeat
 		-- sym"@label"             { }, -- Label
 		-- sym"@operator"          { }, -- Operator
-		-- sym"@keyword"           { }, -- Keyword
+		sym("@keyword")({ fg = reze_colors.pink, gui = "bold" }), -- Keyword (async, await, etc.)
 		-- sym"@exception"         { }, -- Exception
 		-- sym"@variable"          { }, -- Identifier
 		-- sym"@type"              { }, -- Type
 		-- sym"@type.definition"   { }, -- Typedef
-		-- sym"@storageclass"      { }, -- StorageClass
+		sym("@storageclass")({ fg = reze_colors.pink, gui = "bold" }), -- StorageClass (const, let, var)
 		-- sym"@structure"         { }, -- Structure
 		-- sym"@namespace"         { }, -- Identifier
 		-- sym"@include"           { }, -- Include
