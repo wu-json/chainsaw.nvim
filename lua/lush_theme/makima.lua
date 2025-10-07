@@ -2,7 +2,7 @@ local lush = require("lush")
 local hsl = lush.hsl
 
 local palette = {
-	orange_blood = hsl(8, 71, 60),
+	orange_blood = hsl(3, 55, 60),
 	orange_light = hsl(27, 68, 60),
 	white = hsl(340, 8, 97),
 	black = hsl(0, 0, 10),
