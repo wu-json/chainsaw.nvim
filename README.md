@@ -35,6 +35,15 @@ A collection of Neovim lua themes based on characters in Chainsaw Man, built wit
 
 <img width="1232" height="390" alt="スクリーンショット 2025-10-06 午後11 24 16" src="https://github.com/user-attachments/assets/b790b8ff-b65d-480f-bf95-49a219e7feb4" />
 
+## Makima
+
+<img width="1280" height="720" alt="tumblr_ee5d6cd08c990bcb2fbda17625cb03bb_cd6bb4d6_1280" src="https://github.com/user-attachments/assets/d73edb3f-5c76-4068-b0f5-60e571cb1e67" />
+
+![45bdcf937cb8859add67a55952d3af07](https://github.com/user-attachments/assets/cd643d3f-c8c4-4ca9-b789-c2bc319828b0)
+
+<img width="1225" height="390" alt="スクリーンショット 2025-10-06 午後11 50 52" src="https://github.com/user-attachments/assets/ecf4b3ab-de4b-451c-aa58-436f5688cc4f" />
+
+
 # Installation
 
 These instructions use `reze` as the selected example theme but if you want to use a different one in this set just replace it with the one you want. Reze is objectively the best though.
