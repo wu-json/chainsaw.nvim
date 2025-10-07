@@ -35,14 +35,18 @@ A collection of Neovim lua themes based on characters in Chainsaw Man, built wit
 
 <img width="1232" height="390" alt="スクリーンショット 2025-10-06 午後11 24 16" src="https://github.com/user-attachments/assets/b790b8ff-b65d-480f-bf95-49a219e7feb4" />
 
-## Makima
+## Makima マキマ
 
-<img width="1280" height="720" alt="tumblr_ee5d6cd08c990bcb2fbda17625cb03bb_cd6bb4d6_1280" src="https://github.com/user-attachments/assets/d73edb3f-5c76-4068-b0f5-60e571cb1e67" />
+`makima` - The Control Devil.
 
-![45bdcf937cb8859add67a55952d3af07](https://github.com/user-attachments/assets/cd643d3f-c8c4-4ca9-b789-c2bc319828b0)
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/d73edb3f-5c76-4068-b0f5-60e571cb1e67" height="400" /></td>
+    <td><img src="https://github.com/user-attachments/assets/cd643d3f-c8c4-4ca9-b789-c2bc319828b0" height="400" /></td>
+  </tr>
+</table>
 
 <img width="1225" height="390" alt="スクリーンショット 2025-10-06 午後11 50 52" src="https://github.com/user-attachments/assets/ecf4b3ab-de4b-451c-aa58-436f5688cc4f" />
-
 
 # Installation
 
