@@ -22,15 +22,18 @@ A collection of Neovim lua themes based on characters in Chainsaw Man, built wit
 
 <img width="1145" height="391" alt="スクリーンショット 2025-10-05 午前11 48 17" src="https://github.com/user-attachments/assets/93322e50-8991-466b-bc96-9f97ab998d7d" />
 
-## Aki
+## Aki アキ
 
-![chainsaw-man-episode-5-aki-pursues-the-gun-devil-for-vengeance](https://github.com/user-attachments/assets/d668335d-d10b-4b41-b1fc-a358abbaeabc)
+`aki` - The Gun Fiend.
 
-![ab0c7027f2abb33dd3cc99d12fb4a437](https://github.com/user-attachments/assets/c11a41a3-d2f2-47ea-b570-c38d69c7e10c)
-
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/d668335d-d10b-4b41-b1fc-a358abbaeabc" height="400" /></td>
+    <td><img src="https://github.com/user-attachments/assets/c11a41a3-d2f2-47ea-b570-c38d69c7e10c" height="400" /></td>
+  </tr>
+</table>
 
 <img width="1232" height="390" alt="スクリーンショット 2025-10-06 午後11 24 16" src="https://github.com/user-attachments/assets/b790b8ff-b65d-480f-bf95-49a219e7feb4" />
-
 
 # Installation
 
