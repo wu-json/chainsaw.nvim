@@ -2,13 +2,13 @@ local lush = require("lush")
 local hsl = lush.hsl
 
 local palette = {
-	purple = hsl(257, 55, 70),
-	green = hsl(136, 50, 60),
+	orange_blood = hsl(8, 71, 60),
+	orange_light = hsl(27, 68, 60),
 	white = hsl(340, 8, 97),
 	black = hsl(0, 0, 10),
 	gray = hsl(0, 0, 65),
 	gray_muted = hsl(0, 0, 40),
-	magenta = hsl(280, 70, 90),
+	orange_washed = hsl(29, 95, 72),
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -35,7 +35,7 @@ local theme = lush(function(injected_functions)
 		-- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
 		-- CursorColumn   { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		-- CursorLine     { }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
-		Directory({ fg = palette.purple }), -- Directory names (and other special names in listings)
+		Directory({ fg = palette.orange_blood }), -- Directory names (and other special names in listings)
 		-- DiffAdd        { }, -- Diff mode: Added line |diff.txt|
 		-- DiffChange     { }, -- Diff mode: Changed line |diff.txt|
 		-- DiffDelete     { }, -- Diff mode: Deleted line |diff.txt|
@@ -57,10 +57,10 @@ local theme = lush(function(injected_functions)
 		-- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
 		-- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
 		-- MatchParen     { }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-		ModeMsg({ fg = palette.green }), -- 'showmode' message (e.g., "-- INSERT -- ")
+		ModeMsg({ fg = palette.orange_light }), -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea        { }, -- Area for messages and cmdline
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-		MoreMsg({ fg = palette.purple }), -- |more-prompt|
+		MoreMsg({ fg = palette.orange_blood }), -- |more-prompt|
 		-- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		Normal({ fg = palette.white, bg = "NONE" }), -- Normal text
 		NormalFloat({ bg = "NONE" }), -- Normal text in floating windows.
@@ -75,8 +75,8 @@ local theme = lush(function(injected_functions)
 		-- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
 		-- PmenuSbar      { }, -- Popup menu: Scrollbar.
 		-- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
-		Question({ fg = palette.purple }), -- |hit-enter| prompt and yes/no questions
-		QuickFixLine({ fg = palette.purple }), -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+		Question({ fg = palette.orange_blood }), -- |hit-enter| prompt and yes/no questions
+		QuickFixLine({ fg = palette.orange_blood }), -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 		-- Search         { }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
 		-- SpecialKey     { }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
 		-- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -87,7 +87,7 @@ local theme = lush(function(injected_functions)
 		-- StatusLineNC   { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 		TabLine({ fg = palette.white, bg = "NONE" }), -- Tab pages line, not active tab page label
 		TabLineFill({ bg = "NONE" }), -- Tab pages line, where there are no labels (transparent)
-		TabLineSel({ fg = palette.purple, bg = "NONE", gui = "bold" }), -- Tab pages line, active tab page label
+		TabLineSel({ fg = palette.orange_blood, bg = "NONE", gui = "bold" }), -- Tab pages line, active tab page label
 		-- Title          { }, -- Titles for output from ":set all", ":autocmd" etc.
 		-- Visual         { }, -- Visual mode selection
 		-- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -109,14 +109,14 @@ local theme = lush(function(injected_functions)
 		-- Comment        { }, -- Any comment
 
 		-- Constant       { }, -- (*) Any constant
-		String({ fg = palette.green }), --   A string constant: "this is a string"
+		String({ fg = palette.orange_light }), --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
 		-- Number         { }, --   A number constant: 234, 0xff
 		-- Boolean        { }, --   A boolean constant: TRUE, false
 		-- Float          { }, --   A floating point constant: 2.3e10
 
-		Identifier({ fg = palette.purple }), -- (*) Any variable name
-		Function({ fg = palette.purple }), --   Function name (also: methods for classes)
+		Identifier({ fg = palette.orange_blood }), -- (*) Any variable name
+		Function({ fg = palette.orange_blood }), --   Function name (also: methods for classes)
 
 		-- Statement      { }, -- (*) Any statement
 		-- Conditional    { }, --   if, then, else, endif, switch, etc.
@@ -137,12 +137,12 @@ local theme = lush(function(injected_functions)
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
 
-		Special({ fg = palette.purple }), -- (*) Any special symbol
-		-- SpecialChar({ fg = palette.purple }), --   Special character in a constant
-		-- Tag({ fg = palette.purple }), --   You can use CTRL-] on this
+		Special({ fg = palette.orange_blood }), -- (*) Any special symbol
+		-- SpecialChar({ fg = palette.orange_blood }), --   Special character in a constant
+		-- Tag({ fg = palette.orange_blood }), --   You can use CTRL-] on this
 		-- Delimiter      { }, --   Character that needs attention
-		-- SpecialComment({ fg = palette.purple }), --   Special things inside a comment (e.g. '\n')
-		-- Debug({ fg = palette.purple }), --   Debugging statements
+		-- SpecialComment({ fg = palette.orange_blood }), --   Special things inside a comment (e.g. '\n')
+		-- Debug({ fg = palette.orange_blood }), --   Debugging statements
 
 		-- Underlined     { gui = "underline" }, -- Text that stands out, HTML links
 		-- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
@@ -165,25 +165,25 @@ local theme = lush(function(injected_functions)
 		-- See :h diagnostic-highlights, some groups may not be listed, submit a PR fix to lush-template!
 
 		-- Neo-tree highlights (LazyVim default file manager)
-		-- NeoTreeDirectoryIcon({ fg = palette.purple }),
-		-- NeoTreeDirectoryName({ fg = palette.purple }),
-		NeoTreeGitModified({ fg = palette.magenta }),
+		-- NeoTreeDirectoryIcon({ fg = palette.orange_blood }),
+		-- NeoTreeDirectoryName({ fg = palette.orange_blood }),
+		NeoTreeGitModified({ fg = palette.orange_washed }),
 		-- NeoTreeGitUntracked({  }),
 		NeoTreeGitIgnored({ fg = palette.gray }),
-		NeoTreeGitStaged({ fg = palette.magenta }),
+		NeoTreeGitStaged({ fg = palette.orange_washed }),
 		-- NeoTreeGitUnstaged({  }),
 		-- NeoTreeGitConflict({  }),
 		--
 		-- DiagnosticError            { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticWarn             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-		DiagnosticInfo({ fg = palette.purple }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-		DiagnosticHint({ fg = palette.purple }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-		DiagnosticOk({ fg = palette.green }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+		DiagnosticInfo({ fg = palette.orange_blood }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+		DiagnosticHint({ fg = palette.orange_blood }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+		DiagnosticOk({ fg = palette.orange_light }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
 		-- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
-		DiagnosticVirtualTextInfo({ fg = palette.purple }), -- Used for "Info" diagnostic virtual text.
-		DiagnosticVirtualTextHint({ fg = palette.purple }), -- Used for "Hint" diagnostic virtual text.
-		DiagnosticVirtualTextOk({ fg = palette.green }), -- Used for "Ok" diagnostic virtual text.
+		DiagnosticVirtualTextInfo({ fg = palette.orange_blood }), -- Used for "Info" diagnostic virtual text.
+		DiagnosticVirtualTextHint({ fg = palette.orange_blood }), -- Used for "Hint" diagnostic virtual text.
+		DiagnosticVirtualTextOk({ fg = palette.orange_light }), -- Used for "Ok" diagnostic virtual text.
 		-- DiagnosticUnderlineError   { } , -- Used to underline "Error" diagnostics.
 		-- DiagnosticUnderlineWarn    { } , -- Used to underline "Warn" diagnostics.
 		-- DiagnosticUnderlineInfo    { } , -- Used to underline "Info" diagnostics.
@@ -191,14 +191,14 @@ local theme = lush(function(injected_functions)
 		-- DiagnosticUnderlineOk      { } , -- Used to underline "Ok" diagnostics.
 		-- DiagnosticFloatingError    { } , -- Used to color "Error" diagnostic messages in diagnostics float. See |vim.diagnostic.open_float()|
 		-- DiagnosticFloatingWarn     { } , -- Used to color "Warn" diagnostic messages in diagnostics float.
-		DiagnosticFloatingInfo({ fg = palette.purple }), -- Used to color "Info" diagnostic messages in diagnostics float.
-		DiagnosticFloatingHint({ fg = palette.purple }), -- Used to color "Hint" diagnostic messages in diagnostics float.
-		DiagnosticFloatingOk({ fg = palette.green }), -- Used to color "Ok" diagnostic messages in diagnostics float.
+		DiagnosticFloatingInfo({ fg = palette.orange_blood }), -- Used to color "Info" diagnostic messages in diagnostics float.
+		DiagnosticFloatingHint({ fg = palette.orange_blood }), -- Used to color "Hint" diagnostic messages in diagnostics float.
+		DiagnosticFloatingOk({ fg = palette.orange_light }), -- Used to color "Ok" diagnostic messages in diagnostics float.
 		-- DiagnosticSignError        { } , -- Used for "Error" signs in sign column.
 		-- DiagnosticSignWarn         { } , -- Used for "Warn" signs in sign column.
-		DiagnosticSignInfo({ fg = palette.purple }), -- Used for "Info" signs in sign column.
-		DiagnosticSignHint({ fg = palette.purple }), -- Used for "Hint" signs in sign column.
-		DiagnosticSignOk({ fg = palette.green }), -- Used for "Ok" signs in sign column.
+		DiagnosticSignInfo({ fg = palette.orange_blood }), -- Used for "Info" signs in sign column.
+		DiagnosticSignHint({ fg = palette.orange_blood }), -- Used for "Hint" signs in sign column.
+		DiagnosticSignOk({ fg = palette.orange_light }), -- Used for "Ok" signs in sign column.
 
 		-- Tree-Sitter syntax groups.
 		--
@@ -230,7 +230,7 @@ local theme = lush(function(injected_functions)
 		-- sym"@constant.macro"    { }, -- Define
 		-- sym"@define"            { }, -- Define
 		-- sym"@macro"             { }, -- Macro
-		sym("@string")({ fg = palette.green }), -- String
+		sym("@string")({ fg = palette.orange_light }), -- String
 		-- sym"@string.escape"     { }, -- SpecialChar
 		-- sym"@string.special"    { }, -- SpecialChar
 		-- sym"@character"         { }, -- Character
@@ -238,9 +238,9 @@ local theme = lush(function(injected_functions)
 		-- sym"@number"            { }, -- Number
 		-- sym"@boolean"           { }, -- Boolean
 		-- sym"@float"             { }, -- Float
-		sym("@function")({ fg = palette.purple }), -- Function
+		sym("@function")({ fg = palette.orange_blood }), -- Function
 		-- sym"@function.builtin"  { }, -- Special
-		sym("@function.macro")({ fg = palette.purple }), -- Macro
+		sym("@function.macro")({ fg = palette.orange_blood }), -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym"@method"            { }, -- Function
 		sym("@field")({ fg = palette.gray }), -- Field (object fields, etc.)
