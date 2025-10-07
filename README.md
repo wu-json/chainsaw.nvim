@@ -1,5 +1,3 @@
-<img width="1333" height="641" alt="chainsaw-man-13" src="https://github.com/user-attachments/assets/f9567a90-12df-4f1f-bc90-badb9a22956f" />
-
 # chainsaw.nvim
 
 A collection of Neovim lua themes based on characters in Chainsaw Man, built with [Lush](https://github.com/rktjmp/lush.nvim).
