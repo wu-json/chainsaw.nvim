@@ -3,12 +3,12 @@ local hsl = lush.hsl
 
 local palette = {
 	blue = hsl(213, 57, 60),
-	light_blue = hsl(190, 48, 65),
+	blue_light = hsl(190, 48, 65),
+	blue_washed = hsl(190, 48, 85),
 	white = hsl(340, 8, 97),
 	black = hsl(0, 0, 10),
 	gray = hsl(126, 6, 60),
 	gray_muted = hsl(0, 0, 40),
-	magenta = hsl(190, 48, 85),
 }
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
@@ -57,7 +57,7 @@ local theme = lush(function(injected_functions)
 		-- CursorLineFold { }, -- Like FoldColumn when 'cursorline' is set for the cursor line
 		-- CursorLineSign { }, -- Like SignColumn when 'cursorline' is set for the cursor line
 		-- MatchParen     { }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-		ModeMsg({ fg = palette.light_blue }), -- 'showmode' message (e.g., "-- INSERT -- ")
+		ModeMsg({ fg = palette.blue_light }), -- 'showmode' message (e.g., "-- INSERT -- ")
 		-- MsgArea        { }, -- Area for messages and cmdline
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		MoreMsg({ fg = palette.blue }), -- |more-prompt|
@@ -109,7 +109,7 @@ local theme = lush(function(injected_functions)
 		-- Comment        { }, -- Any comment
 
 		-- Constant       { }, -- (*) Any constant
-		String({ fg = palette.light_blue }), --   A string constant: "this is a string"
+		String({ fg = palette.blue_light }), --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
 		-- Number         { }, --   A number constant: 234, 0xff
 		-- Boolean        { }, --   A boolean constant: TRUE, false
@@ -167,10 +167,10 @@ local theme = lush(function(injected_functions)
 		-- Neo-tree highlights (LazyVim default file manager)
 		-- NeoTreeDirectoryIcon({ fg = palette.blue }),
 		-- NeoTreeDirectoryName({ fg = palette.blue }),
-		NeoTreeGitModified({ fg = palette.magenta }),
+		NeoTreeGitModified({ fg = palette.blue_washed }),
 		-- NeoTreeGitUntracked({  }),
 		NeoTreeGitIgnored({ fg = palette.gray }),
-		NeoTreeGitStaged({ fg = palette.magenta }),
+		NeoTreeGitStaged({ fg = palette.blue_washed }),
 		-- NeoTreeGitUnstaged({  }),
 		-- NeoTreeGitConflict({  }),
 		--
@@ -178,12 +178,12 @@ local theme = lush(function(injected_functions)
 		-- DiagnosticWarn             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		DiagnosticInfo({ fg = palette.blue }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		DiagnosticHint({ fg = palette.blue }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-		DiagnosticOk({ fg = palette.light_blue }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+		DiagnosticOk({ fg = palette.blue_light }), -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
 		-- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
 		DiagnosticVirtualTextInfo({ fg = palette.blue }), -- Used for "Info" diagnostic virtual text.
 		DiagnosticVirtualTextHint({ fg = palette.blue }), -- Used for "Hint" diagnostic virtual text.
-		DiagnosticVirtualTextOk({ fg = palette.light_blue }), -- Used for "Ok" diagnostic virtual text.
+		DiagnosticVirtualTextOk({ fg = palette.blue_light }), -- Used for "Ok" diagnostic virtual text.
 		-- DiagnosticUnderlineError   { } , -- Used to underline "Error" diagnostics.
 		-- DiagnosticUnderlineWarn    { } , -- Used to underline "Warn" diagnostics.
 		-- DiagnosticUnderlineInfo    { } , -- Used to underline "Info" diagnostics.
@@ -193,12 +193,12 @@ local theme = lush(function(injected_functions)
 		-- DiagnosticFloatingWarn     { } , -- Used to color "Warn" diagnostic messages in diagnostics float.
 		DiagnosticFloatingInfo({ fg = palette.blue }), -- Used to color "Info" diagnostic messages in diagnostics float.
 		DiagnosticFloatingHint({ fg = palette.blue }), -- Used to color "Hint" diagnostic messages in diagnostics float.
-		DiagnosticFloatingOk({ fg = palette.light_blue }), -- Used to color "Ok" diagnostic messages in diagnostics float.
+		DiagnosticFloatingOk({ fg = palette.blue_light }), -- Used to color "Ok" diagnostic messages in diagnostics float.
 		-- DiagnosticSignError        { } , -- Used for "Error" signs in sign column.
 		-- DiagnosticSignWarn         { } , -- Used for "Warn" signs in sign column.
 		DiagnosticSignInfo({ fg = palette.blue }), -- Used for "Info" signs in sign column.
 		DiagnosticSignHint({ fg = palette.blue }), -- Used for "Hint" signs in sign column.
-		DiagnosticSignOk({ fg = palette.light_blue }), -- Used for "Ok" signs in sign column.
+		DiagnosticSignOk({ fg = palette.blue_light }), -- Used for "Ok" signs in sign column.
 
 		-- Tree-Sitter syntax groups.
 		--
@@ -230,7 +230,7 @@ local theme = lush(function(injected_functions)
 		-- sym"@constant.macro"    { }, -- Define
 		-- sym"@define"            { }, -- Define
 		-- sym"@macro"             { }, -- Macro
-		sym("@string")({ fg = palette.light_blue }), -- String
+		sym("@string")({ fg = palette.blue_light }), -- String
 		-- sym"@string.escape"     { }, -- SpecialChar
 		-- sym"@string.special"    { }, -- SpecialChar
 		-- sym"@character"         { }, -- Character
